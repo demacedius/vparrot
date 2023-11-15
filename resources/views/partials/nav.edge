@@ -1,8 +1,20 @@
-<nav class="flex justify-between items-center bg-primary ">
+<nav class="flex items-center justify-between bg-primary pr-4">
     <img class="w-[30%] p-4 lg:max-w-[200px] " src={{asset('assets/images/logo_vparrot.png')}} alt="logo of compagni">
-    <div class="space-y-2 p-4 pr-8 lg:hidden">
-        <div class="w-12 h-1 bg-gray-600"></div>
-        <div class="w-12 h-1 bg-gray-600"></div>
-        <div class="w-12 h-1 bg-gray-600"></div>
-    </div>
+    <span class="text-3xl cursor-pointer md:hidden block">
+        <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+    </span>
+    <ul class=" md:flex md:items-center z-[1] md:z-auto md:static absolute bg-primary w-full left-0 md:w-auto md:text-2xl md:py-0 py-4 md:pl-0 pl-4
+    md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-[600ms] ">
+        <li class="hover:text-secondary duration-300 mx-4 my-6 md:my-0 md:px-8 md:text-base lg:text-xl "><a  href="">Nos voitures</a></li>
+        <li class="hover:text-secondary duration-300 mx-4 my-6 md:my-0 md:px-8 md:text-base lg:text-xl "><a href="">nous contacter</a></li>
+        <li class="hover:text-secondary duration-300 mx-4 my-6 md:my-0 md:px-8 md:text-base lg:text-xl "><a href="">login</a></li>
+    </ul>
 </nav>
+
+<script>
+    function Menu(e){
+        let list = document.querySelector('ul')
+        e.name === 'menu' ? (e.name = "close" ,list.classList.add('top-[83px]'), list.classList.add('opacity-100')) : (e.name = "menu" ,list.classList.remove('top-[83px]'), list.classList.remove('opacity-100'))
+        
+    }
+</script>
