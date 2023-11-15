@@ -21,3 +21,4 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', 'ServicesController.index')
+Route.get('pages/comment', 'ComentsController.index')
