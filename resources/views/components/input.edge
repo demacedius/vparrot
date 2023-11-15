@@ -1,0 +1,7 @@
+@if(type == 'textarea')
+    <label for="commentaire" class="text-xl ">Entrez votre commentaire</label>
+    <textarea id="commentaire" name="{{name}}" class="rounded-md text-tertial p-4">{{value}}</textarea>
+@else
+    <label for="nom" class="text-xl">Saisissez votre nom</label>
+    <input id="nom" type="{{type}}" name="{{name}}" value="{{value}}" class="rounded-full text-tertial p-2 ">
+@endif
