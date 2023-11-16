@@ -2,8 +2,7 @@
   "assets/app.css": "http://localhost:8080/assets/app.css",
   "assets/app.js": "http://localhost:8080/assets/app.js",
   "assets/images/lorenzo-hamers-9R0aYsnbE_4-unsplash.jpg": "http://localhost:8080/assets/images/lorenzo-hamers-9R0aYsnbE_4-unsplash.2cad6247.jpg",
+  "assets/images/garagiste.jpg": "http://localhost:8080/assets/images/garagiste.e8ea66d6.jpg",
   "assets/images/logo_vparrot.png": "http://localhost:8080/assets/images/logo_vparrot.9a412e73.png",
-  "assets/images/logo_vparrot.svg": "http://localhost:8080/assets/images/logo_vparrot.9a412e73.svg",
-  "assets/images/tekton-rNsRAHLhrHc-unsplash.jpg": "http://localhost:8080/assets/images/tekton-rNsRAHLhrHc-unsplash.e8ea66d6.jpg",
-  "assets/images/garagiste.jpg": "http://localhost:8080/assets/images/garagiste.e8ea66d6.jpg"
+  "assets/images/logo_vparrot.svg": "http://localhost:8080/assets/images/logo_vparrot.9a412e73.svg"
 }
