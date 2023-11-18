@@ -1,0 +1,21 @@
+@layout('layout/layout')
+@section('body')
+<form action="{{ route('LoginController.store')}}" method="post" class="flex flex-col gap-4 bg-tertial text-primary p-4 w-80  h-1/4 rounded-md">
+    @!component('components/input', {
+    type:'email',
+    name: 'email',
+    value: 'Entrez votre email'
+    
+    })
+    @!component('components/input', {
+    type: 'password',
+    name: 'password',
+    value: 'Entrez votre mot de passe'
+    
+    })
+    
+    <button type="submit" class="bg-primary p-2 rounded-full text-tertial hover:bg-secondary">login</button>
+</form>
+    
+    
+@end

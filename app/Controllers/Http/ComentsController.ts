@@ -1,14 +1,14 @@
 import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
-import {schema, rules} from '@ioc:Adonis/Core/Validator'
 import Comment from "App/Models/Comment"
 import CommentValidator from 'App/Validators/CommentValidator'
 
 export default class ComentsController {
     async index({ view }: HttpContextContract){
         const comments = await Comment.all()
-        return view.render('pages/comment',{
-            comments
-        })
+            return view.render('pages/comment',{
+                comments
+            })
+        
     }
 
     async create({ view }: HttpContextContract){
@@ -25,7 +25,7 @@ export default class ComentsController {
             
         })
 
-        return view.render('pages/index', {
+        return view.render('pages/comment', {
             commentaire,
         })
     }

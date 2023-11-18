@@ -7,9 +7,11 @@
     md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-[600ms] ">
         <li class="hover:text-secondary duration-300 mx-4 my-6 md:my-0 md:pr-8 md:ml-0 md:text-sm lg:text-xl "><a  href="">Nos voitures</a></li>
         <li class="hover:text-secondary duration-300 mx-4 my-6 md:my-0 md:pr-8 md:ml-0 md:text-sm lg:text-xl "><a href="">nous contacter</a></li>
-        <li class="hover:text-secondary duration-300 mx-4 my-6 md:my-0 md:pr-8 md:ml-0 md:text-sm lg:text-xl "><a href="">login</a></li>
+        <li class="hover:text-secondary duration-300 mx-4 my-6 md:my-0 md:pr-8 md:ml-0 md:text-sm lg:text-xl "><a href="{{route('/pages/login')}}">login</a></li>
         <li class="hover:text-secondary duration-300 mx-4 my-6 md:my-0 md:pr-8 md:ml-0 md:text-sm lg:text-xl "><a href="{{route('/pages/comment')}}">il parle de nous</a></li>
-        
+        @if( auth.user )
+        <li class="hover:text-secondary duration-300 mx-4 my-6 md:my-0 md:pr-8 md:ml-0 md:text-sm lg:text-xl "><a href="{{route('auth.logout')}}">logout</a></li>
+        @endif
     </ul>
 </nav>
 
