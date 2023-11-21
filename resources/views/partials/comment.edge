@@ -1,41 +1,6 @@
-@layout('layout/layout')
-@section('body')
-
-<div class="p-16 bg-primary ">
-
-  <form action="{{ route('ComentsController.store')}}" method="post"
-    class="flex flex-col gap-4 bg-tertial text-primary p-4 w-80  h-1/4 rounded-md">
-    @!component('components/input', {
-    type:'text',
-    name: 'name',
-    value: 'Entrez votre nom'
-
-    })
-    @!component('components/input', {
-    type: 'textarea',
-    name: 'coment',
-    value: 'Écrivez votre commentaire'
-
-    })
-
-    <select name="rating" id="" class="text-primary bg-gray-50 border border-gray-300 text-sm rounded-lg  focus:bg-tertial block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:bg-tertial dark:focus:border-blue-500">
-      <option value="">choisissez une note pour le garage</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-
-    </select>
-
-    <button type="submit" class="bg-primary p-4 rounded-full text-tertial hover:bg-secondary">Laissez un
-      commentaire</button>
-
-  </form>
-
-</div>
+<h2 class="text-center text-tertial bg-primary font-bold text-2xl pb-8 md:text-3xl lg:text-4xl lg:pb-24">Ils parlent de nous</h2>
 <div class="lg:grid lg:grid-cols-3 lg:auto-rows-auto lg:gap-4 lg:p-16 bg-primary flex flex-col-reverse gap-4 md:grid md:grid-cols-2 md:auto-rows-auto md:gap-4 md:p-8 ">
-  @each(coment in comments)
+  @each(coment in comment)
   @if(coment.validate == 1)
   <div class="p-4 bg-tertial text-primary text-center w-full h-full  md:rounded-lg">
     <h4 class="p-4">{{coment.name}}</h4>
@@ -136,4 +101,37 @@
   @end
   @endeach
 </div>
-@end
+<div class="p-16 bg-primary ">
+
+    <form action="{{ route('ComentsController.store')}}" method="post"
+      class="flex flex-col gap-4 bg-tertial text-primary p-4 w-80  h-1/4 rounded-md">
+      @!component('components/input', {
+      type:'text',
+      name: 'name',
+      value: 'Entrez votre nom'
+  
+      })
+      @!component('components/input', {
+      type: 'textarea',
+      name: 'coment',
+      value: 'Écrivez votre commentaire'
+  
+      })
+  
+      <select name="rating" id=""
+        class="text-primary bg-gray-50 border border-gray-300 text-sm rounded-lg  focus:bg-tertial block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:bg-tertial dark:focus:border-blue-500">
+        <option value="">choisissez une note pour le garage</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+  
+      </select>
+  
+      <button type="submit" class="bg-primary p-4 rounded-full text-tertial hover:bg-secondary">Laissez un
+        commentaire</button>
+  
+    </form>
+  
+  </div>

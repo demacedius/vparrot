@@ -3,14 +3,6 @@ import Comment from "App/Models/Comment"
 import CommentValidator from 'App/Validators/CommentValidator'
 
 export default class ComentsController {
-    async index({ view }: HttpContextContract){
-        const comments = await Comment.all()
-            return view.render('pages/comment',{
-                comments
-            })
-        
-    }
-
     async create({ view }: HttpContextContract){
         return view.render('pages/comment')
     }

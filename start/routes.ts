@@ -22,7 +22,6 @@ import Route from '@ioc:Adonis/Core/Route'
 
 
 Route.get('/', 'ServicesController.index')
-Route.get('pages/comment', 'ComentsController.index')
 Route.post('pages/comment', 'ComentsController.store')
 Route.get('pages/login', 'LoginController.create')
 Route.post('pages/login', 'LoginController.store')
